@@ -1,0 +1,104 @@
+package EjercicioProgramacion;
+
+class Usuario {
+ // Atributos de la clase Usuario
+ private String nombre;
+ private int edad;
+ private String correoElectronico;
+ // Constructor
+ public Usuario(String nombre, int edad, String correoElectronico) {
+ this.nombre = nombre;
+ this.edad = edad;
+ this.correoElectronico = correoElectronico;
+ }
+ // Métodos para acceder a los atributos
+ public String getNombre() {
+ return nombre;
+ }
+ public void setNombre(String nombre) {
+ this.nombre = nombre;
+ }
+ public int getEdad() {
+ return edad;
+ } 
+public void setEdad(int edad) {
+ this.edad = edad;
+ }
+ public String getCorreoElectronico() {
+ return correoElectronico;
+ }
+ public void setCorreoElectronico(String correoElectronico) {
+ this.correoElectronico = correoElectronico;
+ }
+ // Método para imprimir información del usuario
+ public void imprimirInformacion() {
+ System.out.println("Nombre: " + nombre);
+ System.out.println("Edad: " + edad);
+ System.out.println("Correo Electrónico: " + correoElectronico);
+ }
+ public static void main(String[] args) {
+ // Crear un objeto Usuario
+ Usuario usuario1 = new Usuario("Marco", 32, "marcop@example.com");
+ // Imprimir información del usuario
+ usuario1.imprimirInformacion();
+ // Modificar la edad del usuario
+ usuario1.setEdad(30);
+ // Imprimir la información actualizada
+ usuario1.imprimirInformacion();
+ }
+} 
+
+// Clase Jugador con atributos
+
+class Jugador {
+    public String nombre;
+    public String apellido;
+    public String noJugador;
+            
+// Constructor de Jugador
+public Jugador (String nombre, String apellido, String noJugador) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.noJugador = noJugador;
+}
+
+// Método para imprimir información del Jugador
+public void imprimirInformacion () {
+      System.out.println("Jugador" + nombre + " " + apellido + "Número: " + noJugador );
+}
+}
+
+// Clase Encargado con atributos
+class Encargado {
+    public String nombre;
+    public String apellido;
+    public String puesto;
+    
+// Constructor de Encargado
+    public Encargado (String nombre, String apellido, String puesto) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.puesto = puesto;
+    }
+public void imprimirInformacion(){
+    System.out.println("Encargado: " + nombre + " " + apellido + "Puesto: " + puesto);
+}
+}
+
+public class ProgramaPrincipal {
+    public static void main(String[] args) {
+        
+ //Crear un objeto Usuario, Jugador y Encargado
+ Usuario usuariol = new Usuario ( "Marco", 32, "marco_scofield@hotmail.com");
+ Jugador jugadorl = new Jugador ( "Gabriel",  "Muñoz", "7");
+ Encargado encargadol = new Encargado ( "Roberto", "Espinoza", "Ingeniero");
+ 
+ // Llamada de metodo Imprimir informacion
+ 
+ usuariol.imprimirInformacion();
+ jugadorl.imprimirInformacion();
+ encargadol.imprimirInformacion();
+    }
+
+   
+    }
